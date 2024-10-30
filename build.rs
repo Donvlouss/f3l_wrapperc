@@ -13,17 +13,18 @@ fn build_cxx() {
         .with_cpp_compat(true)
         .include_item("WPoint2")
         .include_item("WPoint3")
+        .include_item("WPoint4")
         .with_include_guard("WRAPPER_C_H")
         .generate()
         .expect("Unable to generate bindings")
-        .write_to_file("generated/wrapper_c.h");
+        .write_to_file("generated/wrapper_c.g.h");
 }
 
 fn build_csharp() {
     csbindgen::Builder::new()
         .input_extern_file("src/lib.rs")
         .input_extern_file("src/points.rs")
-        .always_included_types(["WPoint2", "WPoint3"])
+        .always_included_types(["WPoint2", "WPoint3", "WPoint4"])
         .csharp_class_name("WrapperC")
         .csharp_dll_name("wrapper_c")
         .csharp_namespace("WrapperC")
