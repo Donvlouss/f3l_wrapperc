@@ -131,31 +131,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d3fd119d74b830634cea2a0f58bbd0d54540518a14397557951e79340abc28c0"
 
 [[package]]
-name = "crossbeam-deque"
-version = "0.8.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "613f8cc01fe9cf1a3eb3d7f488fd2fa8388403e97039e2f73692932e291a770d"
-dependencies = [
- "crossbeam-epoch",
- "crossbeam-utils",
-]
-
-[[package]]
-name = "crossbeam-epoch"
-version = "0.9.18"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e"
-dependencies = [
- "crossbeam-utils",
-]
-
-[[package]]
-name = "crossbeam-utils"
-version = "0.8.20"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22ec99545bb0ed0ea7bb9b8e1e9122ea386ff8a48c0922e43f36d45ab09e0e80"
-
-[[package]]
 name = "csbindgen"
 version = "1.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -164,12 +139,6 @@ dependencies = [
  "regex",
  "syn",
 ]
-
-[[package]]
-name = "either"
-version = "1.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "60b1af1c220855b6ceac025d3f6ecdd2b7c4894bfe9cd9bda4fbb4bc7c0d4cf0"
 
 [[package]]
 name = "equivalent"
@@ -188,30 +157,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "f3l"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "58f4a5223f3c5a30a5a94a418c108271813c707cfc9a27c54ae5effe90ccdec8"
-dependencies = [
- "f3l_core",
- "f3l_glam",
- "f3l_search_tree",
-]
-
-[[package]]
-name = "f3l_core"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ea3e852c036085014c9e58e5192bfbd0cf268b8e147a3cb1cd59b65ef8bccec"
-dependencies = [
- "f3l_glam",
- "num-traits",
- "rayon",
- "serde",
- "serde_arrays",
-]
-
-[[package]]
 name = "f3l_glam"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -219,15 +164,6 @@ checksum = "ecefc7c7700ed684dedb8ac5bb43eb0fbb36a59ef04f2dca4c8148013131812d"
 dependencies = [
  "glam",
  "num-traits",
-]
-
-[[package]]
-name = "f3l_search_tree"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "421676c0b0437efb7bea1dbb070f11951daf7659a920ee9550614aff6143f627"
-dependencies = [
- "f3l_core",
 ]
 
 [[package]]
@@ -337,26 +273,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rayon"
-version = "1.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b418a60154510ca1a002a752ca9714984e21e4241e804d32555251faf8b78ffa"
-dependencies = [
- "either",
- "rayon-core",
-]
-
-[[package]]
-name = "rayon-core"
-version = "1.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1465873a3dfdaa8ae7cb14b4383657caab0b3e8a0aa9ae8e04b044854c8dfce2"
-dependencies = [
- "crossbeam-deque",
- "crossbeam-utils",
-]
-
-[[package]]
 name = "regex"
 version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -411,15 +327,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3ea7893ff5e2466df8d720bb615088341b295f849602c6956047f8f80f0e9bc1"
 dependencies = [
  "serde_derive",
-]
-
-[[package]]
-name = "serde_arrays"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38636132857f68ec3d5f3eb121166d2af33cb55174c4d5ff645db6165cbef0fd"
-dependencies = [
- "serde",
 ]
 
 [[package]]
@@ -627,5 +534,5 @@ version = "0.1.0"
 dependencies = [
  "cbindgen",
  "csbindgen",
- "f3l",
+ "f3l_glam",
 ]
