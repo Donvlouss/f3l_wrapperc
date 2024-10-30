@@ -16,10 +16,10 @@ fn build_cxx() {
         .include_item("WPoint2")
         .include_item("WPoint3")
         .include_item("WPoint4")
-        .with_include_guard("WRAPPER_C_H")
+        .with_include_guard("F3L_WRAPPER_C_H")
         .generate()
         .expect("Unable to generate bindings")
-        .write_to_file("generated/wrapper_c.g.h");
+        .write_to_file("generated/f3l_wrapper_c.g.h");
 }
 
 fn build_csharp() {
@@ -28,8 +28,8 @@ fn build_csharp() {
         .input_extern_file("src/points.rs")
         .always_included_types(["AlignN", "VecInfo", "WPoint2", "WPoint3", "WPoint4"])
         .csharp_class_name("WrapperC")
-        .csharp_dll_name("wrapper_c")
-        .csharp_namespace("WrapperC")
-        .generate_csharp_file("generated/wrapper_c.g.cs")
+        // .csharp_dll_name("f3l_wrapper_c")
+        .csharp_namespace("F3l")
+        .generate_csharp_file("generated/f3l_wrapper_c.g.cs")
         .expect("Unable to generate bindings.");
 }
